@@ -94,6 +94,72 @@ function krank_carousel($slide_type, $id, $controls, $indicators, $captions, $tr
 	echo $output;
 }
 
+// Portfolio Carousel Custom Query
+function portfolio_carousel($post_limit) {
+	$taxonomy = 'portfolio_category';
+	$cats = get_terms($taxonomy);
+	$first = 0;
+	foreach($cats as $cat):
+		portfolio_carousel_item($cat->name, $cat->count, $first, $post_limit);
+		$first++;
+	endforeach;
+}
+// Portfolio Bootstrap Carousel
+function portfolio_carousel_item($category, $post_count, $first, $post_limit) {
+	$args = array(
+		'post_type' => 'portfolio',
+		'orderby' => 'title', 
+		'order' => 'DESC',
+		'tax_query' => array(
+			array(
+				'taxonomy' => 'portfolio_category',
+				'field' => 'slug',
+				'terms' => $category
+			)
+		)
+	);
+	
+	// var
+	$query = new WP_Query( $args );
+	$count = 0;
+	
+	// Active Class
+	if ($first === 0 ): 
+		$active = 'active';
+	else :
+		$active = '';
+	endif;
+	
+	// Loop
+	while ( $query->have_posts() && $count < $post_limit ) : $query->the_post(); //loop
+		// If loop iteration is a multiple of 3 open div
+		if($count % $post_limit == 0):
+			echo '<div class="item ' . $active . '">'; 
+		endif;
+  	    $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'portfolio-thumb' );
+  	    $thumb_url = $thumb['0'];
+		?>
+		
+		<div class="portfolio-item">
+			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" style="background-image: url(<?php echo $thumb_url; ?>);">
+				<div class="portfolio-title"><h4><span><?php the_title(); ?></span></h4></div>
+			</a>
+		</div>
+		
+		<?php	
+		// Counter
+		$count++;
+		// If loop iteration is a multiple of 3 close div
+		if($count % $post_limit == 0):
+			echo '</div>';
+		endif;
+		if($post_count < $post_limit && $count == $post_count ):
+			echo '</div>';
+		endif;
+		
+	endwhile;
+}
+
 // Structured Data Address
 function krank_structured_business() {
 	global $krank;

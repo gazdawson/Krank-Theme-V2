@@ -5,4 +5,238 @@
 
 // ==========================================================================
 //    Base
+// ==========================================================================
+
+
+// ==========================================================================
+//  Home
+// ==========================================================================
+.home-intro {}
+#home-carousel {
+	min-height: 300px;
+	margin-top: 80px;
+	.make-sm-column(7.8, 0);
+	padding-right: @pad-md;
+	.hidden-xs;
+	
+	.carousel-indicators{}
+	.carousel-inner {
+		.item{
+			img {}
+			.carousel-caption {
+				position: initial;
+				text-shadow: none;
+				text-align: left;
+				color: @text-color;
+				.carousel-title {
+					.h1;
+				}
+				.carousel-description {
+					.lead;
+					text-align: left;
+				}
+			}
+		}
+	}
+	.carousel-control{}
+}
+
+// ==================== Spinning Logo ====================
+
+#spinning-logo {
+	position: relative;
+	.make-sm-column(4.2, 0);
+	
+	img {
+		.img-responsive;
+	}
+	.logo-outer {
+		position: relative;
+		top: 0;
+		left: 0;
+	}
+	.logo-inner {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.logo-shadow {
+		margin-top: 20px;
+	}
+}
+
+// Spin animation
+.spin{
+	animation-name: spin;
+	-webkit-animation-name: spin;	
+
+	animation-duration: 40s;	
+	-webkit-animation-duration: 40s;
+
+	animation-timing-function: linear;	
+	-webkit-animation-timing-function: linear;
+	
+	animation-iteration-count:infinite;
+	-webkit-animation-iteration-count:infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@-webkit-keyframes spin {
+	0% { -webkit-transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(360deg); }
+}
+
+.krank-services {
+	position: relative;
+	&.brand {
+		background-color: @clouds;
+		//color: white;
+		text-align: center;
+		//text-shadow: none;
+		.arrow-up {
+			display: block;
+			position: absolute;
+			top: -@pad-md;
+			left: 50%;
+			margin-left: -@pad-md;
+			width: 0; 
+			height: 0; 
+			border-left: @pad-md solid transparent;
+			border-right: @pad-md solid transparent;
+			border-bottom: @pad-md solid @clouds;
+		}
+	}
+	.service-select {
+		text-align: center;
+		.make-sm-column(6);
+		.make-md-column(3);
+		i {
+			width: 100px;
+			height: 100px;
+			font-size: 40px;
+			line-height: 100px;
+			margin: @pad-sm auto;
+			border: 2px solid @brand-primary;
+			background-color: @brand-primary;
+			color: white;
+			.border-top-radius(50%);
+			.border-bottom-radius(50%);
+			-webkit-transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+			-moz-transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+			-ms-transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+			transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+			&:hover {
+				background-color: @clouds;
+				color: @brand-primary;
+			}
+		}
+		.learn-btn {}
+	}
+}
+.krank-recent-work {
+	text-align: center;
+	//background-color: @brand-primary;
+	//color: white;
+	//text-shadow: none;
+	.heading {
+		.lead {
+			margin: 0;
+		}
+	}
+	.lead {
+		margin: @pad-md 0 @pad-sm 0;
+	}
+	.btn {
+		//.btn-outline(@brand-primary, white);
+	}
+}
+#portfolio-carousel {
+	.item {
+		.portfolio-item {
+			height: 285px;
+			margin-top: @pad-md;
+			.make-xs-column(12);
+			.make-sm-column(6);
+			.make-md-column(4);
+			a {
+				display: block;
+				height: 285px;
+				max-width: 350px;
+				margin: 0 auto;
+				background-repeat: no-repeat;
+				background-position: center;
+				border: 1px solid @clouds;
+				.border-top-radius(@border-radius-base);
+				.border-bottom-radius(@border-radius-base);
+			}
+			.portfolio-title {
+				position: relative;
+				display: none;
+				height: 100%;
+				background-color: rgba(26, 188, 156, .8);
+				text-align: center;
+				h4 {
+					line-height: 285px;
+					color: white;
+					text-shadow: none;
+					span {
+						text-transform: lowercase;
+						padding: 5px @pad-sm;
+						border: 2px solid white;
+						.border-top-radius(3px);
+						.border-bottom-radius(3px);
+						-webkit-transition: background-color 300ms ease-in-out;
+						-moz-transition: background-color 300ms ease-in-out;
+						-ms-transition: background-color 300ms ease-in-out;
+						transition: background-color 300ms ease-in-out;
+						&:hover {
+							background-color: white;
+							color: @brand-primary;
+						}
+					}
+				}
+			}
+		}
+	}
+	.carousel-indicators{
+		position: initial;
+		bottom: 0;
+		left: 0;
+		margin: @pad-md 0 0 ;
+		padding: 0;
+		width: inherit;
+		li {
+			border: 2px solid @text-color;
+			padding: 5px;
+			margin: 0 @pad-sm 0 0;
+			display: inline;
+			width: inherit;
+			height: inherit;
+			font-size: 12px;
+			font-weight: 400;
+			text-indent: 0;
+			text-transform: uppercase;
+			.border-top-radius(3px);
+			.border-bottom-radius(3px);
+			&.active {
+				color: @brand-primary;
+				border-color: @brand-primary;
+				margin: 0 @pad-sm 0 0;
+			}
+		}
+	}
+}
+
+// ==========================================================================
+//    Media Queries
 // ========================================================================== 
+
+@media (min-width: @screen-sm-min) { }
+
+@media (min-width: @screen-md-min) { }
+
+@media (min-width: @screen-lg-min) { }

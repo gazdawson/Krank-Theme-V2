@@ -38,6 +38,38 @@ function krank_metaboxes( array $meta_boxes ) {
 		),
 	);
 	
+	// Krank Home Services
+	$meta_boxes['home_services'] = array(
+		'id'         => 'home_services',
+		'title'      => __( 'Services', 'cmb' ),
+		'pages'      => array( 'page'), // Post type
+		'show_on' => array( 'key' => 'id', 'value' => array( 4 ) ),
+		'context'    => 'normal',
+		'priority'   => 'high',
+		'show_names' => true, // Show field names on the left
+		// 'cmb_styles' => true, // Enqueue the CMB stylesheet on the frontend
+		'fields'     => array(
+			array(
+				'name' => __( 'Services Title', 'cmb' ),
+				'desc' => __( '', 'cmb' ),
+				'id'   => $prefix . 'service_title',
+				'type' => 'text',
+			),
+			array(
+				'name' => __( 'Services Lead', 'cmb' ),
+				'desc' => __( '', 'cmb' ),
+				'id'   => $prefix . 'service_lead',
+				'type' => 'text',
+			),
+			array(
+				'name' => __( 'Services Code', 'cmb' ),
+				'desc' => __( '', 'cmb' ),
+				'id'   => $prefix . 'service_code',
+				'type' => 'textarea_code',
+			),
+		),
+	);
+	
 	// Krank Custom SEO Options
 	$meta_boxes['custom_seo'] = array(
 		'id'         => 'custom_seo',

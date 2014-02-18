@@ -6906,3 +6906,281 @@ figure.alignnone {
  * Krank Theme CSS
  * @package Krank
 */
+#home-carousel {
+  min-height: 300px;
+  margin-top: 80px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-right: 30px;
+}
+@media (min-width: 768px) {
+  #home-carousel {
+    float: left;
+    width: 65%;
+  }
+}
+@media (max-width: 767px) {
+  #home-carousel,
+  tr#home-carousel,
+  th#home-carousel,
+  td#home-carousel {
+    display: none !important;
+  }
+}
+#home-carousel .carousel-inner .item .carousel-caption {
+  position: initial;
+  text-shadow: none;
+  text-align: left;
+  color: #4e5758;
+}
+#home-carousel .carousel-inner .item .carousel-caption .carousel-title {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 36px;
+}
+#home-carousel .carousel-inner .item .carousel-caption .carousel-title small,
+#home-carousel .carousel-inner .item .carousel-caption .carousel-title .small {
+  font-weight: normal;
+  line-height: 1;
+  color: #bdc3c7;
+}
+#home-carousel .carousel-inner .item .carousel-caption .carousel-title small,
+#home-carousel .carousel-inner .item .carousel-caption .carousel-title .small {
+  font-size: 65%;
+}
+#home-carousel .carousel-inner .item .carousel-caption .carousel-description {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 1.4;
+  text-align: left;
+}
+@media (min-width: 768px) {
+  #home-carousel .carousel-inner .item .carousel-caption .carousel-description {
+    font-size: 21px;
+  }
+}
+#spinning-logo {
+  position: relative;
+  min-height: 1px;
+  padding-left: 0;
+  padding-right: 0;
+}
+@media (min-width: 768px) {
+  #spinning-logo {
+    float: left;
+    width: 35%;
+  }
+}
+#spinning-logo img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+#spinning-logo .logo-outer {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+#spinning-logo .logo-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#spinning-logo .logo-shadow {
+  margin-top: 20px;
+}
+.spin {
+  animation-name: spin;
+  -webkit-animation-name: spin;
+  animation-duration: 40s;
+  -webkit-animation-duration: 40s;
+  animation-timing-function: linear;
+  -webkit-animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+.krank-services {
+  position: relative;
+}
+.krank-services.brand {
+  background-color: #ecf0f1;
+  text-align: center;
+}
+.krank-services.brand .arrow-up {
+  display: block;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  margin-left: -30px;
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 30px solid #ecf0f1;
+}
+.krank-services .service-select {
+  text-align: center;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .krank-services .service-select {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .krank-services .service-select {
+    float: left;
+    width: 25%;
+  }
+}
+.krank-services .service-select i {
+  width: 100px;
+  height: 100px;
+  font-size: 40px;
+  line-height: 100px;
+  margin: 15px auto;
+  border: 2px solid #49c9b0;
+  background-color: #49c9b0;
+  color: white;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  -webkit-transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+  -moz-transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+  -ms-transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+}
+.krank-services .service-select i:hover {
+  background-color: #ecf0f1;
+  color: #49c9b0;
+}
+.krank-recent-work {
+  text-align: center;
+}
+.krank-recent-work .heading .lead {
+  margin: 0;
+}
+.krank-recent-work .lead {
+  margin: 30px 0 15px 0;
+}
+#portfolio-carousel .item .portfolio-item {
+  height: 285px;
+  margin-top: 30px;
+  float: left;
+  width: 100%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  #portfolio-carousel .item .portfolio-item {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  #portfolio-carousel .item .portfolio-item {
+    float: left;
+    width: 33.33333333333333%;
+  }
+}
+#portfolio-carousel .item .portfolio-item a {
+  display: block;
+  height: 285px;
+  max-width: 350px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid #ecf0f1;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+#portfolio-carousel .item .portfolio-item .portfolio-title {
+  position: relative;
+  display: none;
+  height: 100%;
+  background-color: rgba(26, 188, 156, 0.8);
+  text-align: center;
+}
+#portfolio-carousel .item .portfolio-item .portfolio-title h4 {
+  line-height: 285px;
+  color: white;
+  text-shadow: none;
+}
+#portfolio-carousel .item .portfolio-item .portfolio-title h4 span {
+  text-transform: lowercase;
+  padding: 5px 15px;
+  border: 2px solid white;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  -webkit-transition: background-color 300ms ease-in-out;
+  -moz-transition: background-color 300ms ease-in-out;
+  -ms-transition: background-color 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out;
+}
+#portfolio-carousel .item .portfolio-item .portfolio-title h4 span:hover {
+  background-color: white;
+  color: #49c9b0;
+}
+#portfolio-carousel .carousel-indicators {
+  position: initial;
+  bottom: 0;
+  left: 0;
+  margin: 30px 0 0;
+  padding: 0;
+  width: inherit;
+}
+#portfolio-carousel .carousel-indicators li {
+  border: 2px solid #4e5758;
+  padding: 5px;
+  margin: 0 15px 0 0;
+  display: inline;
+  width: inherit;
+  height: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  text-indent: 0;
+  text-transform: uppercase;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+#portfolio-carousel .carousel-indicators li.active {
+  color: #49c9b0;
+  border-color: #49c9b0;
+  margin: 0 15px 0 0;
+}
