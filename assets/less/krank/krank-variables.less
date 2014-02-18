@@ -1,0 +1,69 @@
+/**
+ * Krank Variables and Bootstrap Overides
+ * @package Krank
+*/
+
+// ==========================================================================
+//    Bootstrap Import
+// ========================================================================== 
+
+@import "bootstrap/variables.less";
+
+// ==========================================================================
+//    Krank Vars
+// ========================================================================== 
+
+// Krank Flat Colours
+@turquoise: 			#49c9b0;
+@green-sea: 			#16a085;
+@emerald: 				#2ecc71;
+@nephritis: 			#27ae60;
+@peterman-river: 		#3498db;
+@belize-hole: 			#2980b9;
+@amethyst: 				#9b59b6;
+@wisteria: 				#8e44ad;
+@wet-ashphalt: 			#34495e;
+@dark-ashphalt:     	#30383a;
+@midnight-blue: 		#2c3e50;
+@sun-flower: 			#f1c40f;
+@orange: 				#f39c12;
+@carrot: 				#e67e22;
+@pumpkin: 				#d35400;
+@alizarin: 				#e74c3c;
+@pomegranate: 			#c0392b;
+@clouds: 				#ecf0f1;
+@silver: 				#bdc3c7;
+@concrete: 				#95a5a6;
+@asbestos: 				#7f8c8d;
+
+// Krank Spacing
+@pad-sm: 				floor(@grid-gutter-width / 2);
+@pad-md: 				@grid-gutter-width;
+@pad-lg: 				floor(@grid-gutter-width * 2);
+
+// Transition Duration
+@trans: 				.3s ease-in-out;
+@trans-slow: 			.5s ease-in-out;
+
+// ==========================================================================
+//    Bootstrap Overides
+// ==========================================================================
+
+// Main Colour Variables
+@gray-darker:           darken(@asbestos, 20%); 
+@gray-dark:             @asbestos;   
+@gray:                  @concrete; 
+@gray-light:            @silver;   
+@gray-lighter:          @clouds;
+
+@brand-primary:         @turquoise;
+@brand-success:         @emerald;
+@brand-info:            @silver;
+@brand-warning:         @sun-flower;
+@brand-danger:          @alizarin;
+
+// Main Element Colours
+@body-bg:               #fff;
+@text-color:            @gray-darker;
+@link-color:            @brand-primary;
+@link-hover-color:      darken(@link-color, 15%);

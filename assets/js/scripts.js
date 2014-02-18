@@ -1,0 +1,12 @@
+// @codekit-append 	 "plugins/bootstrap/transition.js";
+// @codekit-append 	 "plugins/bootstrap/alert.js";
+// @codekit-append 	 "plugins/bootstrap/button.js";
+// @codekit-append 	 "plugins/bootstrap/carousel.js";
+// @codekit-append 	 "plugins/bootstrap/collapse.js";
+// @codekit-append 	 "plugins/bootstrap/dropdown.js";
+// @codekit-append 	 "plugins/bootstrap/modal.js";
+// @codekit-append 	 "plugins/bootstrap/tooltip.js";
+// @codekit-append 	 "plugins/bootstrap/popover.js";
+// @codekit-append 	 "plugins/bootstrap/scrollspy.js";
+// @codekit-append 	 "plugins/bootstrap/tab.js";
+// @codekit-append 	 "plugins/bootstrap/affix.js";
